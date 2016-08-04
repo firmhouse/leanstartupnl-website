@@ -222,6 +222,18 @@ header {
     }
 }
 
+.service-box-img100 {
+    margin: 0 auto;
+    height:100px;
+    vertical-align:top;
+}
+
+.service-box-img150 {
+    margin: 0 auto;
+    height:150px;
+    vertical-align:top;
+}
+
 .portfolio-box {
     position: relative;
     display: block;
@@ -288,6 +300,7 @@ header {
 .row-padding {
   padding-bottom: 20px;
 }
+
 // Bootstrap Overrides
 .text-primary {
     color: $theme-primary;
