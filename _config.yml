@@ -1,7 +1,7 @@
 # Site settings
-title: "Dutch Lean Startup Circle"
+title: "Lean Startup - Dutch Lean Startup Cirle"
 email: "robbert@leanstartup.nl"
-description: > # this means to ignore newlines until "baseurl:"
+description: Leanstartup.nl shows the pragmatic approach of the Dutch Lean Startup community.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.leanstartup.nl" # the base hostname & protocol for your site
 
@@ -12,3 +12,11 @@ github_username:
 markdown: kramdown
 gems:
   - jekyll-seo-tag
+  - jekyll-redirect-from
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+formbox-url: "https://formbox.es/3TCq3CHWf9brvgA7nacQtTBJ"
+meetup-api-url: "https://api.meetup.com/leanstartupnl/events?photo-host=public&page=3&sig_id=11959350&only=link%2Cname%2Ctime%2Cvenue.city&sig=c11319a9b46076e6fe9894cb61da81937fc3c14d&callback=?"
+google-analytics-code: "UA-59419329-1"

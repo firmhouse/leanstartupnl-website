@@ -10,3 +10,4 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 gem 'kramdown', versions['kramdown']
 gem 'rake'
 gem 'jekyll-seo-tag'
+gem 'jekyll-redirect-from'
