@@ -5,11 +5,13 @@
                 <h2 class="section-heading">Get In Touch!</h2>
                 <hr class="primary">
                 <p>Were here to help! Contact us and we will get back to you as soon as possible!</p>
-                <form class="form-group" action="{{ site.formbox-url }}" method="POST">
+
             </div>
         </div>
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 text-center">
+          {% include thank_you.html %}
+          <form class="form-horizontal" data-behaviour="contact-form" action="{{ site.formbox-url }}" method="POST">
                 <div class="row" style="padding-top:15px;">
                   <div class="col-sm-6 col-sm-offset-3 text-center ">
                     <input class="form-control" type="text" name="name" placeholder="Your name..." required/>

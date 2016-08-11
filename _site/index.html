@@ -444,11 +444,18 @@ title: about
                 <h2 class="section-heading">Get In Touch!</h2>
                 <hr class="primary">
                 <p>Were here to help! Contact us and we will get back to you as soon as possible!</p>
-                <form class="form-group" action="https://formbox.es/3TCq3CHWf9brvgA7nacQtTBJ" method="POST">
+
             </div>
         </div>
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 text-center">
+          <p class="lead hidden text-muted" data-behaviour="contact-form-thank-you">
+  Thanks you for your interest.<br>
+  We'll be in touch soon,<br>
+  Dutch Lean Startup Circle Team
+</p>
+
+          <form class="form-horizontal" data-behaviour="contact-form" action="https://formbox.es/3TCq3CHWf9brvgA7nacQtTBJ" method="POST">
                 <div class="row" style="padding-top:15px;">
                   <div class="col-sm-6 col-sm-offset-3 text-center ">
                     <input class="form-control" type="text" name="name" placeholder="Your name..." required/>
@@ -501,6 +508,18 @@ title: about
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+
+<script type="text/javascript">
+$(document).on("submit", '[data-behaviour="contact-form"]', function() {
+  $.post("https://formbox.es/3TCq3CHWf9brvgA7nacQtTBJ", $(this).serialize());
+  event.preventDefault();
+});
+
+function formboxCallback(entry) {
+  $('[data-behaviour="contact-form"]').addClass('hidden');
+  $('[data-behaviour="contact-form-thank-you"]').removeClass('hidden');
+}
+</script>
 
   
 <script>

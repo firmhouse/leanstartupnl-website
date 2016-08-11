@@ -11,3 +11,15 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+
+<script type="text/javascript">
+$(document).on("submit", '[data-behaviour="contact-form"]', function() {
+  $.post("{{ site.formbox-url }}", $(this).serialize());
+  event.preventDefault();
+});
+
+function formboxCallback(entry) {
+  $('[data-behaviour="contact-form"]').addClass('hidden');
+  $('[data-behaviour="contact-form-thank-you"]').removeClass('hidden');
+}
+</script>
