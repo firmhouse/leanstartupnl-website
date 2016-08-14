@@ -56,13 +56,7 @@ function (data) {
     $.each(data.data, function (i, item) {
       var d = new Date(item.time);
       var formattedDate = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
-      if(item.venue === undefined)
-      {
-        htmlString += '<div class="row row-padding"><div class="col-sm-10 col-sm-offset-0"><h4>'+ formattedDate + ': ' + item.name + '</h4></div><div class="col-sm-2 col-sm-offset-0"><a class="btn btn-primary btn-xl" href="' + item.link + '" target="_blank">Join</a></div></div>';
-      }
-      else {
-        htmlString += '<div class="row row-padding"><div class="col-sm-10 col-sm-offset-0"><h4>'+ formattedDate + ': ' + item.name + ', ' + item.venue.city + '</h4></div><div class="col-sm-2 col-sm-offset-0"><a class="btn btn-primary btn-xl" href="' + item.link + '" target="_blank">Join</a></div></div>';
-      }
+      htmlString += '<div class="row row-padding"><div class="col-sm-10 col-sm-offset-0"><h4>'+ formattedDate + ': ' + item.name + ((item.venue !== undefined) ? ', ' + item.venue.city : '') + '</h4></div><div class="col-sm-2 col-sm-offset-0"><a class="btn btn-primary btn-xl" href="' + item.link + '" target="_blank">Join</a></div></div>';
 });
     $('#groups').html(htmlString);});
     });
